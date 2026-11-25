@@ -1,0 +1,11 @@
+{
+  "browser": "firefox",
+  "url": "http://127.0.0.1/orangehrm-2.5.0.2/login.php",
+  "username":"Bhargav",
+  "password":"123456",
+  "firstname": "Hanu",
+  "lastname" : "DSu",
+  "dropdownoption": "Emp. First Name",
+  "SearchFor": "Akkii"
+  
+}
