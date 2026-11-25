@@ -7,7 +7,7 @@ Given('Open the firefox browser', function () {
   return 'pending';
 });
 
-Given('Navigate to the app URLgit', function () {
+Given('Navigate to the app URL', function () {
   // Write code here that turns the phrase above into concrete actions
   return 'pending';
 });
