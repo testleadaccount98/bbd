@@ -5,6 +5,42 @@ import configData from"../config/configData.json"
 export class PIMPage
  
 {
+    getPim(): string {
+        throw new Error("Method not implemented.");
+    }
+    getAddEmp(): string {
+        throw new Error("Method not implemented.");
+    }
+    getFirstName(): string {
+        throw new Error("Method not implemented.");
+    }
+    getLastName(): string {
+        throw new Error("Method not implemented.");
+    }
+    getSave(): string {
+        throw new Error("Method not implemented.");
+    }
+    getEdit(): string {
+        throw new Error("Method not implemented.");
+    }
+    getChkSmoker(): string {
+        throw new Error("Method not implemented.");
+    }
+   /* getBackButton(): string {
+        throw new Error("Method not implemented.");
+    }
+    getSearchByDropdown(): string {
+        throw new Error("Method not implemented.");
+    }*/
+    getSearchFor(): string {
+        throw new Error("Method not implemented.");
+    }
+   /* getSearchButton(): string {
+        throw new Error("Method not implemented.");
+    }*/
+  /*  getEmployeeName(): string {
+        throw new Error("Method not implemented.");
+    }*/
 private by_PIM_hover ="xpath=//*[@id='pim']";
 private by_Employee_List="xpath=//*[@id='pim']/ul/li[1]/a";
 private by_Add_Emplyoee= "xpath=//*[@id='pim']/ul/li[2]/a";
@@ -19,6 +55,13 @@ private by_firstName = "xpath=//input[@id='txtEmpFirstName']";
  private by_Save_button="xpath=//input[@id='btnEdit']";
  private by_edit_button="xpath=//input[@id='btnEditPers']";
  private by_check_Smoker="xpath=//input[@id='chkSmokeFlag']"
+ private by_back = "xpath=//input[@class='backbutton']";
+  private by_searchByDropdown = "xpath=//select[@id='loc_code']";
+   private by_searchFor = "xpath=//input[@id='loc_name']"
+   private by_searchButton = "xpath=//*[@id='standardView']/div[2]/input[2]"
+   private by_employeeName = "xpath=//a[contains(text(),'Hanu')]";
+
+
  
  private by_dropdwon="xpath=//select[@id='cmbMarital']"
  private by_save_button2="xpath=//input[@id='btnEditPers']";
@@ -88,6 +131,26 @@ getpim_addemptext():string
  {
   return this.by_check_Smoker;
  }
+getBackButton(): string {
+    return this.by_back;
+  }
+ getSearchByDropdown(): string {
+    return this.by_searchByDropdown; //"xpath=//select[@id='loc_code']"
+  }
+  
+  getSearchButton(): string {
+    return this.by_searchButton;
+  }
+
+ 
+ getSearchFor(): string {
+    return this.by_searchFor;
+  }
+
+    getEmployeeName(): string {
+    return this.by_employeeName;
+  }
+
  get_by_dropdwon():string{
   return this.by_dropdwon;
  }

@@ -4,7 +4,7 @@ import {
     Then
 } from "@cucumber/cucumber";
 
-import { FrameLocator } from "@playwright/test";
+import { FrameLocator,Page } from "@playwright/test";
 
 import { LoginPage } from "../pages/LoginPage";
 import { PIMPage } from "../pages/PIMPage";
@@ -26,33 +26,39 @@ let pimFrame: FrameLocator;
 
 
 // Login Step
-Given('log in to the application', async function () {
+/*Given("log in to the application", async  ()=> {
 
     await loginPage.login();
 
+});*/
+
+
+Given('log in to the application', async()=> {
+ await loginPage.login();
 });
 
 
 // Verify Welcome Message
-Then('verify Welcome bhargav', async  () => {
+Then('verify Welcome bhargav', async  () => 
+{
 
     const welcomeText = await CommonUtils.getElementText(
-        loginPage.getWelcomepage();
-    );
+        loginPage.getWelcomepage()
+        )
 
-    await AssertUtil.assertEquals(
-        welcomeText,
-        "Welcome bhargav"
-    );
+    AssertUtil.assertEquals(
+    welcomeText,
+    "Welcome bhargav")
+
 
 });
 
 
 // Move Mouse to PIM
-When('move the mouse to the PIM', async  () => {
+When("move the mouse to the PIM", async  () => {
 
     await CommonUtils.moveToElement(
-        pimPage.getPIM_hover()
+        pimPage. getPIM_hover()
     );
 
 });
@@ -62,7 +68,7 @@ When('move the mouse to the PIM', async  () => {
 When("click on the Add Employee button", async  () => {
 
     await CommonUtils.clilkElement(
-        pimPage.getAddEmp()
+        pimPage. add_Emplyoee()
     );
 
 });
@@ -86,7 +92,7 @@ When(
 
         await CommonUtils.enterValueInFrame(
             pimFrame,
-            pimPage.getFirstName(),
+            pimPage. get_First_name(),
             firstName
         );
 
@@ -95,12 +101,13 @@ When(
 
 
 // Enter Last Name
-When("er the last name {string} into the last name field",
+When(
+    "enter the last name {string} into the last name field",
     async  (lastName: string)=> {
 
         await CommonUtils.enterValueInFrame(
             pimFrame,
-            pimPage.getLastName(),
+            pimPage.get_Last_name(),
             lastName
         );
 
@@ -115,7 +122,7 @@ When(
 
         await CommonUtils.clickElementInFrame(
             pimFrame,
-            pimPage.getSave()
+            pimPage. get_save_button()
         );
 
     }
@@ -127,7 +134,7 @@ When("click the Edit button", async  () => {
 
     await CommonUtils.clickElementInFrame(
         pimFrame,
-        pimPage.getEdit()
+        pimPage.get_edit_button()
     );
 
 });
@@ -139,7 +146,7 @@ Then("verify checkbox inside a frame", async  () => {
     const isChecked =
         await CommonUtils.isElementChecked(
             pimFrame,
-            pimPage.getChkSmoker()
+            pimPage.get_check_Smoker()
         );
 
     await AssertUtil.assertTrue(isChecked);
@@ -222,6 +229,5 @@ console.log("expectedEmployeeName : "+expectedEmployeeName);
             actualEmployeeName,
             expectedEmployeeName
         );
-
-    }
+    }      
 );

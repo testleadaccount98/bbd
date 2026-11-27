@@ -18,9 +18,9 @@ export class LoginPage
  
  
 
- await CommonUtils.clickEelment(this.getLogin());
+ await CommonUtils.clilkElement(this.getLogin());
  
-    let text:string =await CommonUtils.getElemnetText(this.getWelcomepage());
+    let text:string =await CommonUtils.getElementText(this.getWelcomepage());
  console.log(text);
 AssertUtil.assertEquals(text,"Welcome bhargav")
 
