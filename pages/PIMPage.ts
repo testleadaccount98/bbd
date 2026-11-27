@@ -32,9 +32,9 @@ export class PIMPage
     getSearchByDropdown(): string {
         throw new Error("Method not implemented.");
     }*/
-    getSearchFor(): string {
-        throw new Error("Method not implemented.");
-    }
+    //getSearchFor(): string {
+      //  throw new Error("Method not implemented.");
+    //}
    /* getSearchButton(): string {
         throw new Error("Method not implemented.");
     }*/
@@ -59,7 +59,7 @@ private by_firstName = "xpath=//input[@id='txtEmpFirstName']";
   private by_searchByDropdown = "xpath=//select[@id='loc_code']";
    private by_searchFor = "xpath=//input[@id='loc_name']"
    private by_searchButton = "xpath=//*[@id='standardView']/div[2]/input[2]"
-   private by_employeeName = "xpath=//a[contains(text(),'Hanu')]";
+   private by_employeeName = "xpath=//a[contains(text(), 'Hanu')]";
 
 
  
