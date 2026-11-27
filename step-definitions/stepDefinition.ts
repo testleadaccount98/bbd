@@ -25,13 +25,6 @@ const pimPage = new PIMPage();
 let pimFrame: FrameLocator;
 
 
-// Login Step
-/*Given("log in to the application", async  ()=> {
-
-    await loginPage.login();
-
-});*/
-
 
 Given('log in to the application', async()=> {
  await loginPage.login();
