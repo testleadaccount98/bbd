@@ -27,7 +27,7 @@ let pimFrame: FrameLocator;
 
 
 Given('log in to the application', async()=> {
-//await CommonUtils.startBrowser();
+
  await loginPage.login();
 });
 
