@@ -18,7 +18,7 @@ setDefaultTimeout(30000);
 
 
 
-
+let page:Page;
 const loginPage = new LoginPage();
 const pimPage = new PIMPage();
 
@@ -27,6 +27,7 @@ let pimFrame: FrameLocator;
 
 
 Given('log in to the application', async()=> {
+//await CommonUtils.startBrowser();
  await loginPage.login();
 });
 
